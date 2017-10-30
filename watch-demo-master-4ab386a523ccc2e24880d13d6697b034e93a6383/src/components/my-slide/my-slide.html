@@ -1,0 +1,24 @@
+
+<ion-slides class="slide-title"   [pager]="false"  [slidesPerView]="pageNumber"  
+>   
+  <ion-slide *ngFor="let slide of slides; let i = index;">  
+
+      <div id="slideBox" #tableToMeasure (click)="onClick(i)">  
+        <span class="slide-title-unit" [ngClass]="{'slide-title-active': selectedIndex == i}">{{slide}}</span>  
+      </div> 
+
+    
+  </ion-slide>  
+</ion-slides>  
+
+<!--ionic3去掉了option这个属性-->
+
+<!--this.mySlideOptions = {
+    //   loop: false,
+    //   autoplay: false,
+    //   initialSlide: 0,
+    //   pager: false,
+    //   slidesPerView: this.pageNumber,
+    //   paginationHide: true,
+    //   paginationClickable: true
+    // };-->

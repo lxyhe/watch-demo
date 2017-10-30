@@ -1,0 +1,63 @@
+page-custom-dial-plate {
+    // .transBox{
+    //     width: 50%;
+    //     margin-left: 25%;
+    //     height:20vh;
+    //     line-height: 20vh;
+    //     background-image: url('../assets/tutu.jpg');
+
+    // }
+    // .other{
+    //     border-radius: 50%;
+    // }
+    // .other1{
+    //     border-radius: 25%;
+    // }
+    // .swiper-slide-active{
+        
+    // }
+    // .scroll-content{
+    //     background-color:rgba(0,0,0,0.5);
+        
+    // }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: black;
+            text-align: center;
+            color :red! important;
+        }
+
+        #crop_btn {
+            color: white;
+            background-color: #836FFF;
+            height: 40px;
+            display: inline-block;
+            line-height: 40px;
+            width: 110px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        button{
+            appearance: none;
+            -webkit-appearance: none;
+            border: 0;
+            background: none;
+        }
+
+        #crop_circle_btn {
+            color: white;
+            background-color: #836FFF;
+            height: 40px;
+            line-height: 40px;
+            width: 110px;
+            text-align: center;
+            border-radius: 2px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        #crop_circle_btn:active,#crop_btn:active{
+            background-color: #6854e4;
+        }
+}

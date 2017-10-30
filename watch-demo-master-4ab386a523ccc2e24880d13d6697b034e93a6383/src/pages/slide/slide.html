@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{SlideTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div>
+    <my-slide (slideClick)="onSlideClick($event)" [slides]="pageSlides" [pageNumber]="PageNumber"></my-slide>
+
+
+  </div>
+  <!--<div [ngSwitch]="pageContent">
+    <div *ngSwitchCase="'推荐'">
+            <h2 >我是{{pageContent}}页面</h2>
+    </div>
+
+    <div *ngSwitchCase="'热点'">
+         <h2>我是{{pageContent}}页面</h2>
+    </div>
+    <div *ngSwitchCase="'北京'">
+            <h2 >我是{{pageContent}}页面</h2>
+    </div>
+
+    <div *ngSwitchCase="'视频'">
+         <h2>我是{{pageContent}}页面</h2>
+    </div>
+    <div *ngSwitchCase="'头条号'">
+            <h2 >我是{{pageContent}}页面</h2>
+    </div>
+
+    <div *ngSwitchCase="'社会'">
+         <h2>我是{{pageContent}}页面</h2>
+    </div>
+    <div *ngSwitchCase="'问答'">
+            <h2 >我是{{pageContent}}页面</h2>
+    </div>
+    <div *ngSwitchCase="'娱乐'">
+            <h2 >我是{{pageContent}}页面</h2>
+    </div>
+
+    <div *ngSwitchCase="'汽车'">
+         <h2>我是{{pageContent}}页面</h2>
+    </div>
+    
+  </div>-->
+  <ion-slides (ionSlideDidChange)="slideChanged()">
+    <ion-slide *ngFor="let slide of pageSlides; let i = index;">
+      slide页面{{i+1}}
+    </ion-slide>
+  </ion-slides>
+</ion-content>

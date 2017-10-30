@@ -1,0 +1,36 @@
+
+<ion-header>
+
+  <ion-navbar [class.show-background]="showToolbar">
+    <ion-title [hidden]="!showToolbar">旺仔</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="content"
+              (ionScroll)="onScroll($event)"
+              [class.transition]="transition"
+              [style.background-size]="headerImgSize"
+              [style.background-image]="'url('+ headerImgUrl+ ')'">
+
+  <div class="user-info">
+    <img src="./assets/to-user.jpg" alt="">
+    <h4>丢来喽毛</h4>
+    <p>你在看我，你还在看我你在看我我就把你喝掉，旺仔牛奶</p>
+  </div>
+
+  <div class="articles">
+
+    <div class="article-item" *ngFor=" let i of articles">
+      <img src="./assets/user.jpg" alt="">
+      <div class="placeholders">
+        <span class="placeholder "></span>
+        <span class="placeholder "></span>
+        <span class="placeholder "></span>
+        <span class="placeholder p20"></span>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

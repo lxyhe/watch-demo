@@ -1,0 +1,25 @@
+page-tabs{
+    .my-tabs{
+        & a:nth-child(2){
+            ion-icon,span{
+             display: none;   
+            }
+     
+        &::before{
+            content: 'xx';
+            color: transparent;
+            display: block;
+            position: fixed;
+            z-index: 9;
+            bottom: 6px;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            box-shadow:0 0 3px #000;
+            background-size:60px 60px;
+            background-color: #fff;
+            background-image: url('../assets/img/tutu1.jpg');
+        }
+        } 
+    }
+}

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      手表通讯录
+    </ion-title>
+
+    <button ion-button color="light" style="margin-left:75%;" (click)="save()">保存</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content (ionScroll)="onScroll()">
+  <ion-list #scheduleList>
+    <ion-item-group *ngFor="let item of mycontacts" #IonItemGroup>
+
+      <ion-item-divider sticky index-key="item.belong">
+        <ion-label>
+          {{item.groupName}}
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-item-sliding *ngFor="let i of item.contacts" #slidingItem>
+        <ion-item>
+          <ion-label>{{ i.displayName + ' ' + i.name }}</ion-label>
+          <!--<ion-icon (click)="clickIcon(i)" name="checkmark-circle" item-right [ngClass]="{'button-clear-ios-primary': i.chek,'button-clear-ios-my':!i.chek}"></ion-icon>-->
+          <ion-checkbox (click)="clickIcon(i)" style="display:inline-block" item-right checked="true"></ion-checkbox>
+        </ion-item>
+      </ion-item-sliding>
+
+    </ion-item-group>
+  </ion-list>
+
+  <div class="modal" [class.show]="showModal">
+    {{index}}
+  </div>
+
+</ion-content>
